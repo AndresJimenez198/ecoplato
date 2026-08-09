@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Formulario para que un restaurante registre alimentos disponibles para donación."
+    />
+    <title>Publicar excedente | EcoPlato</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>EcoPlato</h1>
+        <p>Comida que conecta, acciones que alimentan</p>
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+              <a href="publicar.html" aria-current="page">Publicar excedente</a>
+            </li>
+            <li><a href="impacto.html">Panel de impacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>Publicar un excedente</h2>
+        <p>
+          Registra los alimentos disponibles hoy. Entre más precisa sea la
+          ventana de disponibilidad, mayor es la probabilidad de que el
+          excedente encuentre destino a tiempo.
+        </p>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Datos del excedente</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="restaurante">Nombre del restaurante</label>
+                <input
+                  type="text"
+                  id="restaurante"
+                  name="restaurante"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="tipoAlimento">Tipo de alimento</label>
+                <select id="tipoAlimento" name="tipoAlimento" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="preparado-caliente">Preparado caliente</option>
+                  <option value="preparado-frio">Preparado frío</option>
+                  <option value="fruta-verdura">Fruta y verdura</option>
+                  <option value="panaderia">Panadería</option>
+                  <option value="proteina-cruda">Proteína cruda</option>
+                  <option value="lacteos">Lácteos</option>
+                  <option value="abarrotes">Abarrotes</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="cantidad">Cantidad en kilogramos</label>
+                <input
+                  type="number"
+                  id="cantidad"
+                  name="cantidad"
+                  min="1"
+                  max="500"
+                  step="0.5"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="disponibleHasta">Disponible hasta</label>
+                <input
+                  type="datetime-local"
+                  id="disponibleHasta"
+                  name="disponibleHasta"
+                  required
+                />
+              </div>
+              <div class="field checkbox">
+                <input
+                  type="checkbox"
+                  id="refrigeracion"
+                  name="refrigeracion"
+                />
+                <label for="refrigeracion">Requiere refrigeración</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Destino y observaciones</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="comedor">Comedor sugerido</label>
+                <select id="comedor" name="comedor">
+                  <option value="automatico">Asignación automática</option>
+                  <option value="santo-domingo">Comedor Santo Domingo</option>
+                  <option value="manrique">Comedor Manrique</option>
+                  <option value="robledo">Comedor Robledo</option>
+                  <option value="belen-rincon">Comedor Belén Rincón</option>
+                </select>
+              </div>
+              <div class="field field-full">
+                <label for="observaciones">Observaciones</label>
+                <textarea
+                  id="observaciones"
+                  name="observaciones"
+                  rows="4"
+                ></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <button type="submit">Publicar excedente</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p>EcoPlato · Proyecto Integrador 2026-2</p>
+        <p>Cesde — Técnico Laboral como Asistente en Desarrollo de Software</p>
+        <p>
+          Juan Sebastián Venegas · Cristian Alberto Castaño · Santiago Agudelo ·
+          Andrés Mauricio Jiménez
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
