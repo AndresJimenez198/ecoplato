@@ -1,11 +1,51 @@
 # EcoPlato · Lienzo de maquetación
 
 Especificación de estructura y contenido para las tres pantallas del
-prototipo. Nivel 1 — solo HTML5.
+prototipo. Nivel 1 — HTML5 y CSS3.
 
-**Cómo se usa:** cada integrante toma su pantalla, respeta la estructura
-semántica indicada y escribe el HTML. El contenido de texto ya está definido
-para que nadie invente copia sobre la marcha.
+**Cómo se usa:** cada integrante toma su componente, respeta la estructura
+semántica indicada y escribe el código. El contenido de texto ya está
+definido para que nadie invente copia sobre la marcha.
+
+**Estado:** las tres pantallas están construidas y la hoja de estilos está
+vinculada. Este documento pasa de ser guía de construcción a ser el
+**estándar de referencia** para mantenimiento, ajustes y sustentación.
+
+---
+
+## Asignación de componentes
+
+| Integrante | Componente | Alcance |
+|---|---|---|
+| Juan Sebastián Venegas | `publicar.html` | Formulario, campos, validaciones y sustentación de la pantalla |
+| Santiago Agudelo Ceballos | `impacto.html` | Tabla de indicadores, datos, sustentación y revisión cruzada de las tres pantallas |
+| Andrés Mauricio Jiménez | `index.html` · `css/styles.css` · `docs/` | Pantalla de presentación, hoja de estilos común y documentación del proyecto |
+
+**Regla no negociable:** un archivo, una persona. Nadie edita el archivo de
+otro. Si algo hay que corregir en una pantalla ajena, se reporta a su
+responsable.
+
+**Excepción:** `css/styles.css` afecta a las tres pantallas. Cualquier cambio
+que se necesite ahí se solicita, no se hace directamente.
+
+---
+
+## Convención de commits
+
+Formato: `prefijo: descripción en español`
+
+| Prefijo | Cuándo |
+|---|---|
+| `feat:` | Se agrega algo nuevo |
+| `fix:` | Se corrige algo roto |
+| `docs:` | Documentación |
+| `chore:` | Configuración o mantenimiento |
+
+Descripción en presente, minúscula inicial, sin punto final.
+Ejemplo: `feat: agrega tabla de indicadores`
+
+**Ciclo de trabajo:** `git pull` al empezar → trabajar → `git status` →
+`git add .` → `git commit -m "..."` → `git pull` → `git push`
 
 ---
 
@@ -19,7 +59,11 @@ lang="es"
 <meta name="viewport">
 <meta name="description">   -> una frase distinta por pantalla
 <title>                     -> "Nombre de la pantalla | EcoPlato"
+<link rel="stylesheet" href="css/styles.css">
 ```
+
+La ruta de la hoja de estilos es idéntica en las tres pantallas. Si una
+pantalla se ve sin formato, lo primero que se revisa es esta línea.
 
 ### Encabezado `<header>` — idéntico en las tres
 
@@ -31,13 +75,15 @@ lang="es"
 
 **Regla:** el `<h1>` va una sola vez por página y es el nombre del proyecto.
 
+El `<nav>` lleva `aria-label="Navegación principal"`, y el enlace que apunta
+a la página actual lleva `aria-current="page"`. Cada archivo marca el suyo.
+
 ### Pie `<footer>` — idéntico en las tres
 
 ```
 EcoPlato · Proyecto Integrador 2026-2
 Cesde — Técnico Laboral como Asistente en Desarrollo de Software
-Juan Sebastián Venegas · Cristian Alberto Castaño ·
-Santiago Agudelo · Andrés Mauricio Jiménez
+Juan Sebastián Venegas · Santiago Agudelo · Andrés Mauricio Jiménez
 ```
 
 ---
@@ -137,6 +183,12 @@ con el mismo valor. Si no coinciden, la asociación no existe.
 | Requiere refrigeración | `<input type="checkbox">` | `refrigeracion` | — |
 | Comedor sugerido | `<select>` | `comedor` | opciones abajo |
 | Observaciones | `<textarea>` | `observaciones` | `rows="4"` |
+
+Los campos obligatorios son: restaurante, tipo de alimento, cantidad y
+disponible hasta. Cada `<option>` lleva su atributo `value`. El primer
+`<option>` del tipo de alimento tiene `value=""` para que `required`
+funcione; el de comedor sugerido no lo necesita, porque "Asignación
+automática" es una opción válida.
 
 Opciones de **Tipo de alimento**:
 Preparado caliente · Preparado frío · Fruta y verdura · Panadería ·
@@ -239,3 +291,16 @@ semánticamente incorrecto.
 - [ ] Los enlaces del `<nav>` funcionan en las tres direcciones
 - [ ] No queda ningún `<div>` que pudiera ser una etiqueta semántica
 - [ ] No hay texto de relleno: todo el contenido es real
+- [ ] Las tres pantallas cargan la hoja de estilos correctamente
+- [ ] Los tres archivos validan sin errores en validator.w3.org
+
+---
+
+## Historial de versiones
+
+| Versión | Fecha | Cambio |
+|---|---|---|
+| 1.0 | 2026-08-08 | Especificación inicial para construir las tres pantallas |
+| 2.0 | 2026-08-22 | Equipo de 3 integrantes, incorporación de CSS3, asignación de componentes y convención de commits |
+
+**Última actualización:** 22 de agosto de 2026
