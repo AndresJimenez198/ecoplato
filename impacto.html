@@ -1,131 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Indicadores de la operación de EcoPlato, incluidas las donaciones que no fueron recogidas."
-    />
-    <title>Panel de impacto | EcoPlato</title>
-  </head>
-  <body>
-    <header>
-      <div>
-        <h1>EcoPlato</h1>
-        <p>Comida que conecta, acciones que alimentan</p>
-        <nav aria-label="Navegación principal">
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="publicar.html">Publicar excedente</a></li>
-            <li>
-              <a href="impacto.html" aria-current="page">Panel de impacto</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section>
-        <h2>Panel de impacto</h2>
-        <p>
-          Datos de ejemplo correspondientes al mes de julio de 2026. La última
-          fila mide los excedentes publicados que nadie recogió: es el indicador
-          que muestra dónde falla el sistema.
-        </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Indicadores de la operación de EcoPlato, incluidas las donaciones que no fueron recogidas.">
+  <title>Panel de impacto | EcoPlato</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>EcoPlato</h1>
+    <p>Comida que conecta, acciones que alimentan</p>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="publicar.html">Publicar excedente</a></li>
+        <li><a href="impacto.html" aria-current="page">Panel de impacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
 
-        <div class="table-wrap">
-          <table>
-            <caption>
-              Indicadores de operación — julio 2026
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Indicador</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Mes anterior</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Kilogramos rescatados</th>
-                <td>1.847 kg</td>
-                <td>1.502 kg</td>
-              </tr>
-              <tr>
-                <th scope="row">Porciones equivalentes</th>
-                <td>5.277</td>
-                <td>4.291</td>
-              </tr>
-              <tr>
-                <th scope="row">Restaurantes activos</th>
-                <td>23</td>
-                <td>19</td>
-              </tr>
-              <tr>
-                <th scope="row">Comedores atendidos</th>
-                <td>8</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <th scope="row">Tasa de asignación</th>
-                <td>87 %</td>
-                <td>81 %</td>
-              </tr>
-              <tr>
-                <th scope="row">Tiempo medio de recogida</th>
-                <td>3,2 horas</td>
-                <td>4,1 horas</td>
-              </tr>
-              <tr>
-                <th scope="row">Donaciones no recogidas</th>
-                <td>13 %</td>
-                <td>19 %</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+<section>
+  <h2>Panel de impacto</h2>
+  <p>Datos de ejemplo correspondientes al mes de julio de 2026. La última fila mide los excedentes publicados que nadie recogió: es el indicador que muestra dónde falla el sistema.</p>
 
-        <p>
-          <small
-            >Porciones calculadas sobre una equivalencia de 0,35 kg por
-            porción.</small
-          >
-        </p>
-      </section>
+  <div class="table-wrap">
+    <table>
+      <caption>Indicadores de operación — julio 2026</caption>
+      <thead>
+        <tr>
+          <th scope="col">Indicador</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Mes anterior</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Kilogramos rescatados</th><td>1.847 kg</td><td>1.502 kg</td></tr>
+        <tr><th scope="row">Porciones equivalentes</th><td>5.277</td><td>4.291</td></tr>
+        <tr><th scope="row">Restaurantes activos</th><td>23</td><td>19</td></tr>
+        <tr><th scope="row">Comedores atendidos</th><td>8</td><td>7</td></tr>
+        <tr><th scope="row">Tasa de asignación</th><td>87 %</td><td>81 %</td></tr>
+        <tr><th scope="row">Tiempo medio de recogida</th><td>3,2 horas</td><td>4,1 horas</td></tr>
+        <tr><th scope="row">Donaciones no recogidas</th><td>13 %</td><td>19 %</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-      <section>
-        <h2>Cómo se calculan los indicadores</h2>
-        <dl>
-          <dt>Tasa de asignación</dt>
-          <dd>
-            Porcentaje de excedentes publicados que fueron asignados a un
-            comedor dentro de su ventana de disponibilidad.
-          </dd>
+  <p><small>Porciones calculadas sobre una equivalencia de 0,35 kg por porción.</small></p>
+</section>
 
-          <dt>Tiempo medio de recogida</dt>
-          <dd>
-            Horas transcurridas entre la publicación del excedente y su recogida
-            efectiva.
-          </dd>
+<section>
+  <h2>Cómo se calculan los indicadores</h2>
+  <dl>
+    <dt>Tasa de asignación</dt>
+    <dd>Porcentaje de excedentes publicados que fueron asignados a un comedor dentro de su ventana de disponibilidad.</dd>
 
-          <dt>Donaciones no recogidas</dt>
-          <dd>
-            Porcentaje de excedentes publicados que expiraron sin ser recogidos.
-            Se publica de forma deliberada como compromiso de transparencia.
-          </dd>
-        </dl>
-      </section>
-    </main>
-    <footer>
-      <div>
-        <p>EcoPlato · Proyecto Integrador 2026-2</p>
-        <p>Cesde — Técnico Laboral como Asistente en Desarrollo de Software</p>
-        <p>
-          Juan Sebastián Venegas · Cristian Alberto Castaño · Santiago Agudelo ·
-          Andrés Mauricio Jiménez
-        </p>
-      </div>
-    </footer>
-  </body>
+    <dt>Tiempo medio de recogida</dt>
+    <dd>Horas transcurridas entre la publicación del excedente y su recogida efectiva.</dd>
+
+    <dt>Donaciones no recogidas</dt>
+    <dd>Porcentaje de excedentes publicados que expiraron sin ser recogidos. Se publica de forma deliberada como compromiso de transparencia.</dd>
+  </dl>
+</section>
+
+</main>
+<footer>
+  <div>
+    <p>EcoPlato · Proyecto Integrador 2026-2</p>
+    <p>Cesde — Técnico Laboral como Asistente en Desarrollo de Software</p>
+    <p>Juan Sebastián Venegas · Cristian Alberto Castaño · Santiago Agudelo · Andrés Mauricio Jiménez</p>
+  </div>
+</footer>
+</body>
 </html>
