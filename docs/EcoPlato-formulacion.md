@@ -12,7 +12,7 @@
 | Nivel | Nivel 1 |
 | Periodo académico | 2026-2 |
 | Docente | Yarleyda Borja Borja |
-| Fecha de entrega | 8 de agosto de 2026 |
+| Fecha de actualización | 22 de agosto de 2026 |
 | Momento de evidencia | Primer Momento |
 
 ---
@@ -22,9 +22,8 @@
 | # | Nombre completo | Documento de identidad |
 |---|---|---|
 | 1 | Juan Sebastián Venegas | 1.037.608.335 |
-| 2 | Cristian Alberto Castaño Castaño | 1.214.723.776 |
-| 3 | Santiago Agudelo Ceballos | 1.001.032.321 |
-| 4 | Andrés Mauricio Jiménez Rodríguez | 15.371.198 |
+| 2 | Santiago Agudelo Ceballos | 1.001.032.321 |
+| 3 | Andrés Mauricio Jiménez Rodríguez | 15.371.198 |
 
 El equipo trabaja de forma colaborativa, con distribución del desarrollo por
 componentes y apoyo mutuo en el aprendizaje de las herramientas.
@@ -156,8 +155,8 @@ viabilidad de cada entrega.
 
 | Nivel | Tecnologías disponibles | Entregable |
 |---|---|---|
-| **Nivel 1** | HTML5 | Prototipo navegable estático: registro de excedente, panel de comedor y panel de impacto con datos de ejemplo |
-| **Nivel 2** | CSS3, JavaScript, backend y base de datos | Aplicación funcional con registro real, emparejamiento operativo e indicadores calculados |
+| **Nivel 1** | HTML5 y CSS3 | Prototipo navegable con estilos: registro de excedente, panel de comedor y panel de impacto con datos de ejemplo |
+| **Nivel 2** | JavaScript, backend y base de datos | Aplicación funcional con registro real, emparejamiento operativo e indicadores calculados |
 | **Nivel 3** | Frameworks de frontend y backend | Módulo de pronóstico, optimización de la asignación y despliegue en producción |
 
 **Criterio de viabilidad:** el prototipo del Nivel 1 debe comunicar la
@@ -200,12 +199,13 @@ integración y permite que todos registren avances de forma paralela.
 | Pantalla de presentación | Estructura semántica del sitio, navegación entre pantallas y exposición de la propuesta de valor |
 | Pantalla de registro de excedente | Construcción del formulario con sus campos, etiquetas asociadas y atributos correspondientes |
 | Pantalla de panel de impacto | Construcción de la tabla de indicadores con encabezados, cuerpo y datos de ejemplo |
-| Elementos comunes y documentación | Encabezado y pie compartidos entre pantallas, y elaboración de los documentos de evidencia |
+| Hoja de estilos y elementos comunes | Definición de la paleta corporativa, encabezado y pie compartidos entre pantallas |
+| Documentación | Elaboración y actualización de los documentos de formulación y evidencias |
 
 ### Acuerdos de trabajo
 
-- Las tres pantallas comparten el mismo encabezado y el mismo pie, para
-  garantizar consistencia visual y estructural.
+- Las tres pantallas comparten el mismo encabezado, el mismo pie y la misma
+  hoja de estilos, para garantizar consistencia visual y estructural.
 - Cada integrante trabaja sobre su propio archivo, evitando modificaciones
   simultáneas sobre el mismo documento.
 - El estándar de estructura semántica se acuerda antes de empezar a construir
@@ -215,10 +215,17 @@ integración y permite que todos registren avances de forma paralela.
 - El equipo comparte el aprendizaje de las herramientas: quien avanza primero
   en un tema apoya a los demás.
 
-**Flujo de trabajo con Git:** cada integrante clona el repositorio, trabaja
-sobre su componente asignado y registra sus avances mediante el ciclo
-`status`, `add`, `commit` y `push`. Los mensajes de commit se redactan en
-inglés y en modo imperativo, siguiendo la convención profesional.
+### Convención de control de versiones
+
+Cada integrante clona el repositorio, trabaja sobre su componente asignado y
+registra sus avances mediante el ciclo `pull`, `status`, `add`, `commit` y
+`push`. Los mensajes de commit siguen el estándar Conventional Commits, con
+el prefijo técnico en inglés y la descripción en español:
+
+- `feat:` incorporación de una funcionalidad nueva
+- `fix:` corrección de un error existente
+- `docs:` cambios en la documentación del proyecto
+- `chore:` tareas de configuración o mantenimiento
 
 ---
 
@@ -228,8 +235,8 @@ inglés y en modo imperativo, siguiendo la convención profesional.
 |---|---|
 | Visibilidad | Público |
 | Plataforma | GitHub |
-| URL | `[POR DEFINIR]` |
-| Número de integrantes | 4 |
+| URL | https://github.com/AndresJimenez198/ecoplato |
+| Número de integrantes | 3 |
 
 ---
 
@@ -255,8 +262,17 @@ inglés y en modo imperativo, siguiendo la convención profesional.
 | Incluir la tasa de donaciones no recogidas como indicador visible | Diferenciación por transparencia; ninguna alternativa la expone |
 | Construir el Nivel 1 sin dependencia de servidor | El primer entregable debe poder demostrarse con pantallas estáticas |
 | Distribuir el trabajo por componentes y no por roles jerárquicos | Favorece el aprendizaje compartido y el avance paralelo del equipo |
+| Adoptar Conventional Commits con descripción en español | Mantiene el estándar técnico y asegura la comprensión del equipo |
 
 ---
 
-**Versión:** 2.0
-**Fecha:** 8 de agosto de 2026
+**Versión:** 3.0
+**Fecha:** 22 de agosto de 2026
+
+### Historial de versiones
+
+| Versión | Fecha | Cambio |
+|---|---|---|
+| 1.0 | 2026-08-08 | Formulación inicial con benchmarking |
+| 2.0 | 2026-08-08 | Integrantes, metodología por componentes |
+| 3.0 | 2026-08-22 | Actualización del equipo a 3 integrantes, incorporación de CSS3 al Nivel 1, URL del repositorio y convención de commits |
