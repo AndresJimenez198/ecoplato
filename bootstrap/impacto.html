@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Indicadores de la operación de EcoPlato, incluidas las donaciones que no fueron recogidas.">
+  <title>Panel de impacto | EcoPlato · Bootstrap</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/ecoplato.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-eco navbar-eco" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">EcoPlato</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+              aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publicar.html">Publicar excedente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="impacto.html" aria-current="page">Panel de impacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-eco text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">EcoPlato</h1>
+      <p class="lead fst-italic mb-0">Comida que conecta, acciones que alimentan</p>
+    </div>
+  </div>
+</header>
+
+<main class="container my-5">
+
+  <section class="mb-5">
+    <h2 class="text-eco border-bottom border-3 border-eco pb-2 mb-3">Panel de impacto</h2>
+    <p class="mb-4">Datos de ejemplo correspondientes al mes de julio de 2026. La
+    última fila mide los excedentes publicados que nadie recogió: es el indicador que
+    muestra dónde falla el sistema.</p>
+
+    <div class="row g-3 mb-4">
+      <div class="col-6 col-lg-3">
+        <div class="card text-center h-100 card-destacada shadow-sm">
+          <div class="card-body">
+            <p class="display-6 fw-bold text-eco mb-0">1.847</p>
+            <p class="text-muted small mb-0">kilogramos rescatados</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="card text-center h-100 card-destacada shadow-sm">
+          <div class="card-body">
+            <p class="display-6 fw-bold text-eco mb-0">5.277</p>
+            <p class="text-muted small mb-0">porciones equivalentes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="card text-center h-100 card-destacada shadow-sm">
+          <div class="card-body">
+            <p class="display-6 fw-bold text-eco mb-0">87 %</p>
+            <p class="text-muted small mb-0">tasa de asignación</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="card text-center h-100 card-destacada shadow-sm">
+          <div class="card-body">
+            <p class="display-6 fw-bold text-warning mb-0">13 %</p>
+            <p class="text-muted small mb-0">donaciones no recogidas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-hover align-middle tabla-indicadores">
+        <caption>Indicadores de operación — julio 2026</caption>
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Indicador</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Mes anterior</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Kilogramos rescatados</th><td>1.847 kg</td><td>1.502 kg</td></tr>
+          <tr><th scope="row">Porciones equivalentes</th><td>5.277</td><td>4.291</td></tr>
+          <tr><th scope="row">Restaurantes activos</th><td>23</td><td>19</td></tr>
+          <tr><th scope="row">Comedores atendidos</th><td>8</td><td>7</td></tr>
+          <tr><th scope="row">Tasa de asignación</th><td>87 %</td><td>81 %</td></tr>
+          <tr><th scope="row">Tiempo medio de recogida</th><td>3,2 horas</td><td>4,1 horas</td></tr>
+          <tr class="fila-critica"><th scope="row">Donaciones no recogidas</th><td>13 %</td><td>19 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-muted small">Porciones calculadas sobre una equivalencia de
+    0,35 kg por porción.</p>
+  </section>
+
+  <section>
+    <h2 class="text-eco border-bottom border-3 border-eco pb-2 mb-4">Cómo se calculan los indicadores</h2>
+    <dl class="row">
+      <dt class="col-sm-4 text-eco">Tasa de asignación</dt>
+      <dd class="col-sm-8">Porcentaje de excedentes publicados que fueron asignados a
+      un comedor dentro de su ventana de disponibilidad.</dd>
+
+      <dt class="col-sm-4 text-eco">Tiempo medio de recogida</dt>
+      <dd class="col-sm-8">Horas transcurridas entre la publicación del excedente y su
+      recogida efectiva.</dd>
+
+      <dt class="col-sm-4 text-eco">Donaciones no recogidas</dt>
+      <dd class="col-sm-8">Porcentaje de excedentes publicados que expiraron sin ser
+      recogidos. Se publica de forma deliberada como compromiso de transparencia.</dd>
+    </dl>
+  </section>
+
+</main>
+
+<footer class="bg-eco text-white py-4">
+  <div class="container text-center">
+    <p class="mb-1 fw-semibold">EcoPlato · Proyecto Integrador 2026-2</p>
+    <p class="mb-1 small">Cesde — Técnico Laboral como Asistente en Desarrollo de Software</p>
+    <p class="mb-0 small">Juan Sebastián Venegas · Santiago Agudelo · Andrés Mauricio Jiménez</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario para que un restaurante registre alimentos disponibles para donación.">
+  <title>Publicar excedente | EcoPlato · Bootstrap</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/ecoplato.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-eco navbar-eco" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">EcoPlato</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+              aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="publicar.html" aria-current="page">Publicar excedente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="impacto.html">Panel de impacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-eco text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">EcoPlato</h1>
+      <p class="lead fst-italic mb-0">Comida que conecta, acciones que alimentan</p>
+    </div>
+  </div>
+</header>
+
+<main class="container my-5">
+
+  <section>
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <h2 class="text-eco border-bottom border-3 border-eco pb-2 mb-3">Publicar un excedente</h2>
+        <p class="mb-4">Registra los alimentos disponibles hoy. Entre más precisa sea
+        la ventana de disponibilidad, mayor es la probabilidad de que el excedente
+        encuentre destino a tiempo.</p>
+
+        <form action="#" method="post" class="card shadow-sm">
+          <div class="card-body p-4">
+
+            <fieldset class="mb-4">
+              <legend class="h5 text-eco border-bottom pb-2 mb-3">Datos del excedente</legend>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="restaurante" class="form-label">Nombre del restaurante</label>
+                  <input type="text" class="form-control" id="restaurante" name="restaurante" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="tipoAlimento" class="form-label">Tipo de alimento</label>
+                  <select class="form-select" id="tipoAlimento" name="tipoAlimento" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="preparado-caliente">Preparado caliente</option>
+                    <option value="preparado-frio">Preparado frío</option>
+                    <option value="fruta-verdura">Fruta y verdura</option>
+                    <option value="panaderia">Panadería</option>
+                    <option value="proteina-cruda">Proteína cruda</option>
+                    <option value="lacteos">Lácteos</option>
+                    <option value="abarrotes">Abarrotes</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="cantidad" class="form-label">Cantidad en kilogramos</label>
+                  <input type="number" class="form-control" id="cantidad" name="cantidad"
+                         min="1" max="500" step="0.5" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="disponibleHasta" class="form-label">Disponible hasta</label>
+                  <input type="datetime-local" class="form-control" id="disponibleHasta"
+                         name="disponibleHasta" required>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="refrigeracion" name="refrigeracion">
+                    <label class="form-check-label" for="refrigeracion">Requiere refrigeración</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="h5 text-eco border-bottom pb-2 mb-3">Destino y observaciones</legend>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="comedor" class="form-label">Comedor sugerido</label>
+                  <select class="form-select" id="comedor" name="comedor">
+                    <option value="automatico">Asignación automática</option>
+                    <option value="santo-domingo">Comedor Santo Domingo</option>
+                    <option value="manrique">Comedor Manrique</option>
+                    <option value="robledo">Comedor Robledo</option>
+                    <option value="belen-rincon">Comedor Belén Rincón</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="observaciones" class="form-label">Observaciones</label>
+                  <textarea class="form-control" id="observaciones" name="observaciones" rows="4"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+          </div>
+
+          <div class="card-footer bg-white border-top p-4 text-end">
+            <button type="submit" class="btn btn-eco btn-lg">Publicar excedente</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-eco text-white py-4">
+  <div class="container text-center">
+    <p class="mb-1 fw-semibold">EcoPlato · Proyecto Integrador 2026-2</p>
+    <p class="mb-1 small">Cesde — Técnico Laboral como Asistente en Desarrollo de Software</p>
+    <p class="mb-0 small">Juan Sebastián Venegas · Santiago Agudelo · Andrés Mauricio Jiménez</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

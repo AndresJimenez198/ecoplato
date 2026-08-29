@@ -1,0 +1,64 @@
+/* ==========================================================
+   EcoPlato · Personalización sobre Bootstrap 5
+   Solo sobrescribe la identidad de marca.
+   Todo lo demás lo resuelve el framework.
+   ========================================================== */
+
+:root {
+  --eco-verde: #2e7d32;
+  --eco-verde-oscuro: #1b5e20;
+  --eco-naranja: #ef6c00;
+  --eco-naranja-oscuro: #d84315;
+}
+
+/* --- Colores de marca sobre las utilidades de Bootstrap --- */
+
+.bg-eco {
+  background-color: var(--eco-verde) !important;
+}
+
+.text-eco {
+  color: var(--eco-verde) !important;
+}
+
+.border-eco {
+  border-color: var(--eco-naranja) !important;
+}
+
+/* --- Botón corporativo (variante propia del framework) --- */
+
+.btn-eco {
+  background-color: var(--eco-naranja);
+  border-color: var(--eco-naranja);
+  color: #fff;
+}
+
+.btn-eco:hover,
+.btn-eco:focus {
+  background-color: var(--eco-naranja-oscuro);
+  border-color: var(--eco-naranja-oscuro);
+  color: #fff;
+}
+
+/* --- Detalles de composición --- */
+
+.navbar-eco .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-eco .nav-link:hover,
+.navbar-eco .nav-link.active {
+  color: #fff;
+}
+
+.card-destacada {
+  border-left: 5px solid var(--eco-naranja);
+}
+
+.tabla-indicadores tbody th {
+  font-weight: 600;
+}
+
+.fila-critica {
+  background-color: #fff3e0;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma que anticipa y asigna excedentes alimentarios de restaurantes hacia comedores comunitarios.">
+  <title>Inicio | EcoPlato · Bootstrap</title>
+
+  <!-- Vinculación del framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Personalización de marca -->
+  <link rel="stylesheet" href="css/ecoplato.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-eco navbar-eco" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">EcoPlato</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+              aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publicar.html">Publicar excedente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="impacto.html">Panel de impacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-eco text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">EcoPlato</h1>
+      <p class="lead fst-italic mb-0">Comida que conecta, acciones que alimentan</p>
+    </div>
+  </div>
+</header>
+
+<main class="container my-5">
+
+  <section class="mb-5">
+    <h2 class="text-eco border-bottom border-3 border-eco pb-2 mb-4">El problema</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <p>Los restaurantes generan excedentes de alimentos aptos para el consumo
+        humano todos los días. No son un accidente: son un patrón. Sin embargo, se
+        gestionan cuando ya ocurrieron, y para entonces quedan pocas horas antes de
+        que el alimento deje de ser aprovechable.</p>
+      </div>
+      <div class="col-lg-6">
+        <p>Del otro lado, los comedores comunitarios no pueden planear su menú porque
+        no saben qué van a recibir ni cuándo. La consecuencia es doble: alimento en
+        buen estado que termina en la basura, y operaciones sociales que improvisan.</p>
+      </div>
+    </div>
+    <div class="alert alert-warning border-0 border-start border-5 border-eco mt-3" role="alert">
+      <strong>El problema no es la falta de un canal. Los canales existen. El problema
+      es que todos operan después de que el excedente ya ocurrió.</strong>
+    </div>
+  </section>
+
+  <section class="mb-5">
+    <h2 class="text-eco border-bottom border-3 border-eco pb-2 mb-4">Qué es EcoPlato</h2>
+    <p class="mb-4">EcoPlato es una plataforma que anticipa el excedente antes de que
+    ocurra y lo asigna al comedor comunitario que mejor puede aprovecharlo.</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <article class="card h-100 card-destacada shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title h5 text-eco">Anticipa</h3>
+            <p class="card-text">El excedente de un restaurante responde a patrones de
+            día de la semana, quincena y eventos locales. Con histórico suficiente
+            puede estimarse antes de que exista.</p>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="card h-100 card-destacada shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title h5 text-eco">Asigna</h3>
+            <p class="card-text">La distribución no se hace por orden de llegada, sino
+            considerando capacidad del comedor, distancia y ventana de
+            perecibilidad.</p>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="card h-100 card-destacada shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title h5 text-eco">Mide</h3>
+            <p class="card-text">Cada operación queda registrada en indicadores
+            públicos, incluidos los que muestran cuándo el sistema falla.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-5">
+    <h2 class="text-eco border-bottom border-3 border-eco pb-2 mb-4">Cómo funciona</h2>
+    <ol class="list-group list-group-numbered">
+      <li class="list-group-item">El restaurante registra el excedente disponible y
+      hasta qué hora puede recogerse.</li>
+      <li class="list-group-item">La plataforma estima la demanda de los comedores
+      cercanos y propone una asignación.</li>
+      <li class="list-group-item">El comedor confirma la recogida y coordina el
+      horario.</li>
+      <li class="list-group-item">La operación se registra y alimenta los indicadores
+      de impacto.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2 class="text-eco border-bottom border-3 border-eco pb-2 mb-4">Qué nos hace distintos</h2>
+    <p>Existen plataformas que conectan excedentes con receptores. Todas operan
+    después de que el excedente ocurrió. EcoPlato se diferencia en tres puntos.</p>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><strong class="text-eco">Anticipación.</strong>
+      Estimamos el excedente antes de que exista, para que el receptor planee en lugar
+      de improvisar.</li>
+      <li class="list-group-item"><strong class="text-eco">Asignación con restricciones.</strong>
+      Consideramos capacidad, distancia y perecibilidad, no el orden de llegada.</li>
+      <li class="list-group-item"><strong class="text-eco">Transparencia sobre el fracaso.</strong>
+      Publicamos el porcentaje de excedentes que nadie recogió. Ninguna alternativa lo
+      hace.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="bg-eco text-white py-4">
+  <div class="container text-center">
+    <p class="mb-1 fw-semibold">EcoPlato · Proyecto Integrador 2026-2</p>
+    <p class="mb-1 small">Cesde — Técnico Laboral como Asistente en Desarrollo de Software</p>
+    <p class="mb-0 small">Juan Sebastián Venegas · Santiago Agudelo · Andrés Mauricio Jiménez</p>
+  </div>
+</footer>
+
+<!-- Componentes interactivos del framework (menú responsivo) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
